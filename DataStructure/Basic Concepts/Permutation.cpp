@@ -10,7 +10,7 @@ void Permutations(char* a, const int k, const int size)
 	}
 	else 
 	{ 	// »¼°j
-		for (int i = k; i < size; i++) 
+		for (int i = k; i < size; i++)  
 		{	// ¤¬´« a[k] and a[i]
 			char temp = a[k]; 
 			a[k] = a[i]; 

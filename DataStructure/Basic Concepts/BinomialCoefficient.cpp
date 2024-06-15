@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-//二項式係數
+//二項式係數 
 int Binomial(int n,int m)
 {
     if (m == 0 || m == n) return 1;

@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-//阿克曼函數
+//阿克曼函數 
 int Ackermann(int m,int n)
 {
     if(m == 0) return n + 1;
