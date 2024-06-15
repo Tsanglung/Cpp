@@ -2,7 +2,7 @@
 using namespace std;
 //排列組合
 void Permutations(char* a, const int k, const int size) 
-{
+{ 
 	if (k == size - 1) 
 	{  // 輸出排列組合結果
 		for (int i = 0; i < size; i++) cout << a[i] << " ";

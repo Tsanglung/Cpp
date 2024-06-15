@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int RFactorial(int n)//»¼°j¶¥­¼ 
+int RFactorial(int n)//»¼°j¶¥­¼
 {
     if(n <= 1) return 1;
     else return n * RFactorial(n - 1);
