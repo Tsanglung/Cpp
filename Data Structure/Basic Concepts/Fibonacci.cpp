@@ -7,7 +7,7 @@ int Fibonacci (int n)// ¶O¤ó¼Æ¦C
    else return Fibonacci(n - 1) + Fibonacci(n - 2);
 } 
 
-int main()
+int main() 
 {
   int n;
   cout << "Input n : ";
