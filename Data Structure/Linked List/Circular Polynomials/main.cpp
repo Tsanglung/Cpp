@@ -42,11 +42,11 @@ void TestPerformance(const Polynomial& A, const Polynomial& B)
 }
 
 int main(void)
-{  //å…ˆè¼¸å…¥é …æ•¸
-    //å†è¼¸å…¥ä¿‚æ•¸ æŒ‡æ•¸ \n
+{  //¥ı¿é¤J¶µ¼Æ
+    //¦A¿é¤J«Y¼Æ «ü¼Æ \n
     Polynomial A, B;
 
-    //è®€å–.inæª”çš„å¤šé …å¼ä¿‚æ•¸ã€æŒ‡æ•¸
+    //Åª¨ú.inÀÉªº¦h¶µ¦¡«Y¼Æ¡B«ü¼Æ
     ifstream inputFile("polynomials.in",ios::in);
     if (!inputFile.is_open()) {
         cerr << "can't open file..." << endl;
@@ -57,16 +57,16 @@ int main(void)
     inputFile >> B;
     cout << "B(x) = " << B << endl;
 
-    /*cout << "First polynomial A(x): ";//è¼¸å…¥é …æ•¸
-    cin >> A;//è¼¸å…¥å¤šé …å¼
+    /*cout << "First polynomial A(x): ";//¿é¤J¶µ¼Æ
+    cin >> A;//¿é¤J¦h¶µ¦¡
     cout << "A(x) = " << A << endl;
-    Polynomial K(A);//copy å»ºæ§‹å­
+    Polynomial K(A);//copy «Øºc¤l
     cout << "Copy Constructor A(x) : " << K;
-    cout << "\nSecond polynomial B(x): ";//è¼¸å…¥é …æ•¸
-    cin >> B;//è¼¸å…¥å¤šé …å¼
+    cout << "\nSecond polynomial B(x): ";//¿é¤J¶µ¼Æ
+    cin >> B;//¿é¤J¦h¶µ¦¡
     cout << "B(x) = " << B << endl;
     cout<<endl;*/
     TestPerformance(A,B);
-    inputFile.close();//é—œé–‰æª”æ¡ˆ
+    inputFile.close();//Ãö³¬ÀÉ®×
     return 0;
 }

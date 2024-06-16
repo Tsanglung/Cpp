@@ -1,19 +1,19 @@
 //Polynomial.cpp
 #include "Poly.h"
 
-Polynomial::Polynomial()    {   poly.head->data = {0, -1};     /* åˆå§‹åŒ– polynomial*/}
-Polynomial::Polynomial(const Polynomial &p) {   if (&p != NULL)     *this = p;  /*copy å»ºæ§‹å­*/}
-Polynomial::~Polynomial()   {} //è§£æ§‹å­
+Polynomial::Polynomial()    {   poly.head->data = {0, -1};     /* ªì©l¤Æ polynomial*/}
+Polynomial::Polynomial(const Polynomial &p) {   if (&p != NULL)     *this = p;  /*copy «Øºc¤l*/}
+Polynomial::~Polynomial()   {} //¸Ñºc¤l
 Polynomial& Polynomial::operator+(const Polynomial& b) const
-{   //ä¿®æ”¹èª²æœ¬p.91 Program 2.8 æ ¼å¼ï¼Œå¤šé …å¼åŠ æ³•
-    Polynomial *newPoly = new Polynomial;//å‰µå»º newPoly ç‰©ä»¶
+{   //­×§ï½Ò¥»p.91 Program 2.8 ®æ¦¡¡A¦h¶µ¦¡¥[ªk
+    Polynomial *newPoly = new Polynomial;//³Ğ«Ø newPoly ª«¥ó
     Term item;
 
     ChainNode<Term> *aPos = poly.head->link, 
                                     *bPos = b.poly.head->link;
     while (aPos != poly.head && bPos != b.poly.head) {
         if (aPos->data.exp == bPos->data.exp) 
-        {   //æŒ‡æ•¸ç›¸åŒï¼Œä¿‚æ•¸ç›¸åŠ 
+        {   //«ü¼Æ¬Û¦P¡A«Y¼Æ¬Û¥[
             float t = aPos->data.coef + bPos->data.coef;
             item = {t, aPos->data.exp};
             if (t) newPoly->poly.InsertBack(item);
@@ -33,16 +33,16 @@ Polynomial& Polynomial::operator+(const Polynomial& b) const
         }
     }
     for (; aPos != poly.head; aPos = aPos->link) 
-    {   //add å‰©ä¸‹çš„ terms 
+    {   //add ³Ñ¤Uªº terms 
         item = {aPos->data.coef, aPos->data.exp}; 
         newPoly->poly.InsertBack(item);
     }
     for (; bPos != b.poly.head; bPos = bPos->link) 
-    {   //add å‰©ä¸‹çš„ terms 
+    {   //add ³Ñ¤Uªº terms 
         item = {bPos->data.coef, bPos->data.exp};
         newPoly->poly.InsertBack(item);
     }
-    return *newPoly;//å›å‚³åŠ æ³•çµæœ
+    return *newPoly;//¦^¶Ç¥[ªkµ²ªG
 }
 
 Polynomial& Polynomial::operator-(const Polynomial& b) const
@@ -54,7 +54,7 @@ Polynomial& Polynomial::operator-(const Polynomial& b) const
                                     *bPos = b.poly.head->link;
     while (aPos != poly.head && bPos != b.poly.head) {
         if (aPos->data.exp == bPos->data.exp) 
-        {    //æŒ‡æ•¸ç›¸åŒï¼Œä¿‚æ•¸ç›¸æ¸›
+        {    //«ü¼Æ¬Û¦P¡A«Y¼Æ¬Û´î
             float t = aPos->data.coef - bPos->data.coef;
             item = {t, aPos->data.exp};
             if (t) newPoly->poly.InsertBack(item);
@@ -88,23 +88,23 @@ Polynomial& Polynomial::operator-(const Polynomial& b) const
 
 Polynomial& Polynomial::operator*(const Polynomial& b) const
 {
-    Polynomial *newPoly = new Polynomial;//å„²å­˜new å¤šé …å¼çš„ç‰©ä»¶ 
-    ChainNode<Term> *bPos = b.poly.head->link;//å–å¾—å¤šé …å¼ b çš„head
+    Polynomial *newPoly = new Polynomial;//Àx¦snew ¦h¶µ¦¡ªºª«¥ó 
+    ChainNode<Term> *bPos = b.poly.head->link;//¨ú±o¦h¶µ¦¡ b ªºhead
     
     while (bPos != b.poly.head) 
-    {   // èµ°è¨ªå¤šé …å¼ b çš„æ¯å€‹ç¯€é»
-        ChainNode<Term> *currentNode = poly.head->link; // æŒ‡å‘ Polynomial ç‰©ä»¶çš„ç¬¬ä¸€å€‹ç¯€é»çš„æŒ‡æ¨™ cur
+    {   // ¨«³X¦h¶µ¦¡ b ªº¨C­Ó¸`ÂI
+        ChainNode<Term> *currentNode = poly.head->link; // «ü¦V Polynomial ª«¥óªº²Ä¤@­Ó¸`ÂIªº«ü¼Ğ cur
         Polynomial *temp = new Polynomial;
         for (; currentNode != poly.head; currentNode = currentNode->link)
-        {   //å¾ç¬¬ä¸€å€‹ç¯€é»é–‹å§‹ï¼Œç›´åˆ° cur æŒ‡å‘ Polynomial ç‰©ä»¶çš„head nodeç‚ºæ­¢
-            //æ¯æ¬¡è¿­ä»£å¾Œå°‡ cur æŒ‡å‘ä¸‹ä¸€å€‹ç¯€é»ã€‚
+        {   //±q²Ä¤@­Ó¸`ÂI¶}©l¡Aª½¨ì cur «ü¦V Polynomial ª«¥óªºhead node¬°¤î
+            //¨C¦¸­¡¥N«á±N cur «ü¦V¤U¤@­Ó¸`ÂI¡C
             Term item;
-            item.coef = currentNode->data.coef * bPos->data.coef; // ä¿‚æ•¸ç›¸ä¹˜
-            item.exp = currentNode->data.exp +  bPos->data.exp; // æŒ‡æ•¸ç›¸åŠ 
+            item.coef = currentNode->data.coef * bPos->data.coef; // «Y¼Æ¬Û­¼
+            item.exp = currentNode->data.exp +  bPos->data.exp; // «ü¼Æ¬Û¥[
             temp->poly.InsertBack(item);
         }
         *newPoly = *newPoly + *temp;
-        bPos = bPos->link; // æŒ‡å‘ä¸‹ä¸€å€‹ node
+        bPos = bPos->link; // «ü¦V¤U¤@­Ó node
         delete temp;   
     }
     return *newPoly;
@@ -112,7 +112,7 @@ Polynomial& Polynomial::operator*(const Polynomial& b) const
 
 const Polynomial& Polynomial::operator=(const Polynomial& b)
 {
-    //å°‡è¼¸å…¥ Polynomial ç‰©ä»¶çš„é …ç›®æŒ‡æ´¾çµ¦ç›®å‰çš„ Polynomial ç‰©ä»¶ã€‚
+    //±N¿é¤J Polynomial ª«¥óªº¶µ¥Ø«ü¬£µ¹¥Ø«eªº Polynomial ª«¥ó¡C
     poly = b.poly;  return *this;
 }
 

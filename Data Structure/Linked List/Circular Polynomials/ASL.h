@@ -5,8 +5,8 @@
 #include <iostream>
 
 /*
-å®šç¾© chains çš„ template
-èª²æœ¬ p.186 Program 4.6
+©w¸q chains ªº template
+½Ò¥» p.186 Program 4.6
 */
 template<class Type>
 class Chain;
@@ -28,11 +28,11 @@ template<class Type>
 class Chain {
     friend class Polynomial;
     public:
-        Chain();    //å»ºæ§‹å­
-        ~Chain();   //è§£æ§‹å­
-        ChainNode<Type>* GetNode(); //å–å¾—node èª²æœ¬ p.198 Program 4.15
-        void RetNode(ChainNode<Type>* &); //é‡‹æ”¾node èª²æœ¬ p.198 Program 4.16
-        void InsertBack(Type &);//æ’å…¥ list åœ¨ endï¼Œèª²æœ¬P.192 Program 4.11
+        Chain();    //«Øºc¤l
+        ~Chain();   //¸Ñºc¤l
+        ChainNode<Type>* GetNode(); //¨ú±onode ½Ò¥» p.198 Program 4.15
+        void RetNode(ChainNode<Type>* &); //ÄÀ©ñnode ½Ò¥» p.198 Program 4.16
+        void InsertBack(Type &);//´¡¤J list ¦b end¡A½Ò¥»P.192 Program 4.11
         void DeleteFront();
         const Chain<Type>& operator=(const Chain<Type>&);
         friend ostream& operator<<(ostream&, Polynomial&);

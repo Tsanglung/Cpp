@@ -1,32 +1,32 @@
 //AvailableSpaceList.cpp
 #include "ASL.h"
 
-template<class Type>    ChainNode<Type>* Chain<Type>::av = NULL;       // åˆå§‹åŒ– av
+template<class Type>    ChainNode<Type>* Chain<Type>::av = NULL;       // ªì©l¤Æ av
 
 template<class Type>
 Chain<Type>::Chain()
-{   //å»ºç«‹ä¸€å€‹æœ‰head node çš„ circular list
-    head = last = GetNode();    // å–å¾— header node
-    head->link = head;          // å»ºç«‹ circular
+{   //«Ø¥ß¤@­Ó¦³head node ªº circular list
+    head = last = GetNode();    // ¨ú±o header node
+    head->link = head;          // «Ø¥ß circular
 }
 
 template<class Type>
 Chain<Type>::~Chain()
-{  //åˆªé™¤circluar listï¼Œä¸¦å°‡node æ–°å¢åˆ°å¯ç”¨ç©ºé–“
-    //èª²æœ¬ P198 Program 4.17
+{  //§R°£circluar list¡A¨Ã±Nnode ·s¼W¨ì¥i¥ÎªÅ¶¡
+    //½Ò¥» P198 Program 4.17
     ChainNode<Type> *first = last->link;
     if (last) {
-        last->link = av;    //last node é€£çµåˆ° av 
-        av = first;  //listçš„ first node æˆç‚º av list çš„ front
+        last->link = av;    //last node ³sµ²¨ì av 
+        av = first;  //listªº first node ¦¨¬° av list ªº front
         last = NULL;
     }
 }
 
 template<class Type>
 ChainNode<Type>* Chain<Type>::GetNode()
-{   //å¾å¯ç”¨ç©ºé–“å–å¾—node (è‹¥nodeå­˜åœ¨)
-    //è‹¥ç„¡å‰‡å»ºç«‹æ–°çš„node
-    //èª²æœ¬ p.198 Program 4.15
+{   //±q¥i¥ÎªÅ¶¡¨ú±onode (­Ynode¦s¦b)
+    //­YµL«h«Ø¥ß·sªºnode
+    //½Ò¥» p.198 Program 4.15
     ChainNode<Type> *x;
     if (av) {
         x = av;
@@ -39,8 +39,8 @@ ChainNode<Type>* Chain<Type>::GetNode()
 
 template<class Type>
 void Chain<Type>::RetNode(ChainNode<Type>* &x)
-{  //èª²æœ¬ p.198 Program 4.16
-    //é‡‹æ”¾ x æŒ‡å‘çš„ç¯€é»
+{  //½Ò¥» p.198 Program 4.16
+    //ÄÀ©ñ x «ü¦Vªº¸`ÂI
     x->link = av;
     av = x;
     x = 0;
@@ -48,7 +48,7 @@ void Chain<Type>::RetNode(ChainNode<Type>* &x)
 
 template<class Type>
 void Chain<Type>::DeleteFront()
-{   //åˆ©ç”¨RetNode functioné‡‹æ”¾æŒ‡å‘çš„node
+{   //§Q¥ÎRetNode functionÄÀ©ñ«ü¦Vªºnode
     ChainNode<Type> *x = head->link;
     head->link = x->link;
     RetNode(x);
@@ -56,7 +56,7 @@ void Chain<Type>::DeleteFront()
 
 template<class Type>
 void Chain<Type>::InsertBack(Type &e)
-{//å°‡data e çš„æ–° node æ’å…¥ list çš„ tailï¼Œèª²æœ¬P.192 Program 4.11
+{//±Ndata e ªº·s node ´¡¤J list ªº tail¡A½Ò¥»P.192 Program 4.11
     ChainNode<Type> *x = GetNode();
     last->link = x;
     x->link = head;
@@ -67,7 +67,7 @@ void Chain<Type>::InsertBack(Type &e)
 template<class Type>
 const Chain<Type>& Chain<Type>::operator=(const Chain<Type> &ch)
 {
-    //å°‡ç¯€é»å¾è¼¸å…¥ Chain ç‰©ä»¶ a è¤‡è£½åˆ°ç›®å‰ Chain å°è±¡ï¼Œå–ä»£ç›®å‰ nodeã€‚
+    //±N¸`ÂI±q¿é¤J Chain ª«¥ó a ½Æ»s¨ì¥Ø«e Chain ¹ï¶H¡A¨ú¥N¥Ø«e node¡C
     ChainNode<Type> *chtemp;
     if (head->link != head) {      
         last->link = av;

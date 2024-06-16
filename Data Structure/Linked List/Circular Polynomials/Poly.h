@@ -6,35 +6,35 @@
 using namespace std;
 
 /*
-æ ¹æ“šHomeWork
-èª²æœ¬p203 Program 4.23
-å®šç¾© Polynomial class
+®Ú¾ÚHomeWork
+½Ò¥»p203 Program 4.23
+©w¸q Polynomial class
 */
 class Polynomial; 
 
 #include "ASL.h" //AvailableSpaceList.h
 
 typedef struct term {
-    //å®šç¾©Termçš„çµæ§‹
+    //©w¸qTermªºµ²ºc
     float coef; //coefficiten
     int exp;    //exponent
 } Term;
 
-istream& operator>>(istream&, Polynomial&); //è¼¸å‡ºä¸²æµ
-ostream& operator<<(ostream&, Polynomial&); //è¼¸å…¥ä¸²æµ
+istream& operator>>(istream&, Polynomial&); //¿é¥X¦ê¬y
+ostream& operator<<(ostream&, Polynomial&); //¿é¤J¦ê¬y
 
 class Polynomial {
     public:
-        Polynomial();   //å»ºæ§‹å­
+        Polynomial();   //«Øºc¤l
         /*(a)*/friend istream& operator>>(istream&, Polynomial&);  //input
         /*(b)*/friend ostream& operator<<(ostream&, Polynomial&);//output
-        /*(c)*/Polynomial(const Polynomial&);  //copy å»ºæ§‹å­
-        /*(d)*/const Polynomial& operator=(const Polynomial&); //è³¦å€¼é‹ç®—å­
-        /*(e)*/~Polynomial();  //è§£æ§‹å­
-        /*(f)*/Polynomial& operator+(const Polynomial&) const; //åŠ 
-        /*(g)*/Polynomial& operator-(const Polynomial&) const; //æ¸›
-        /*(h)*/Polynomial& operator*(const Polynomial&) const; //ä¹˜
-        /*(i)*/float Evaluate(float x) const;  //å¸¶å…¥ x å€¼ï¼Œè¨ˆç®—polyçµæœ
+        /*(c)*/Polynomial(const Polynomial&);  //copy «Øºc¤l
+        /*(d)*/const Polynomial& operator=(const Polynomial&); //½á­È¹Bºâ¤l
+        /*(e)*/~Polynomial();  //¸Ñºc¤l
+        /*(f)*/Polynomial& operator+(const Polynomial&) const; //¥[
+        /*(g)*/Polynomial& operator-(const Polynomial&) const; //´î
+        /*(h)*/Polynomial& operator*(const Polynomial&) const; //­¼
+        /*(i)*/float Evaluate(float x) const;  //±a¤J x ­È¡A­pºâpolyµ²ªG
 
     private:
         Chain<Term> poly;
