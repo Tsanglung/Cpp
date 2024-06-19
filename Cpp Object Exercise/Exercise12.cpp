@@ -1,3 +1,6 @@
+/*
+使用繼承建立新的堆疊類別以修改push與pop兩函數的問題
+*/
 #include <iostream>
 #include <cstdlib>
 using namespace std;
@@ -29,18 +32,19 @@ public:
 int main()
 {
 	StackSon s;
-	int PushNumber;
-	cout << endl << "輸入要push幾個數:";
-	cin >> PushNumber;
-	for (int i = 0; i < PushNumber; i++) {
-		s.push(i);
-	}
-	int PopNumber;
-	cout << endl << "輸入要pop幾個數:";
-	cin >> PopNumber;
-	for (int i = 0; i < PopNumber; i++) {
-		s.pop();
-	}
+	cout << "push : " << endl;
+	s.push(5);
+	s.push(6);
+	s.push(7);
+	s.push(8);
+	s.push(9);
+	s.push(10);
+	cout << "pop :" << endl;
+	s.pop();
+	s.pop();
+	s.pop();
+	s.pop();
+	s.pop();
 	cout << endl;
-	system("pause"); return 0;
+	return 0;
 }
