@@ -4,47 +4,45 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-class Stack
-{
-protected:
-	int array[5]; //存放堆疊資料
-	int top; //由0開始, 記錄陣列下一個可以存放資料的index
+class Stack{
+protected:	
+		 int* array;
+		 int top, num;
 public:
-	Stack() { top = 0; }
-	void push(int var) { array[top] = var; cout << array[top] << endl; top++; }
-	void  pop() { top--; cout << array[top] << endl; }
+	Stack(int n) { num = n; top = 0; array = new int[num]; }
+	~Stack() { delete[]array; cout << "動態配置記憶體已清除" << endl; }
+	void push(int var) { array[top] = var; top++; }
+	void pop() { top--; cout << array[top] << endl; }
 };
-class StackSon :public Stack //繼承
-{
+
+class StacSon :public Stack{
 public:
-	StackSon() { }
+	StacSon(int n) :Stack(n) { }
 	void push(int var)
 	{
-		if (top < 5) Stack::push(var);
+		if (top < num) Stack::push(var);
 		else { cout << "堆疊已滿" << endl; }
 	}
-	void pop() {
-		if (top > 0)  Stack::pop();
+	void pop()
+	{
+		if (top > 0) Stack::pop();
 		else { cout << "堆疊已空"; }
 	}
-
 };
+
 int main()
 {
-	StackSon s;
-	cout << "push : " << endl;
+	StacSon s(5);
 	s.push(5);
 	s.push(6);
 	s.push(7);
 	s.push(8);
 	s.push(9);
-	s.push(10);
-	cout << "pop :" << endl;
+	s.pop();
 	s.pop();
 	s.pop();
 	s.pop();
 	s.pop();
 	s.pop();
 	cout << endl;
-	return 0;
 }
