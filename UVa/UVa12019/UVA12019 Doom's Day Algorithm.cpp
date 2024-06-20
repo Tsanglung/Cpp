@@ -26,7 +26,7 @@ int main()
 				{
 					day = day + 30;
 				}
-			}
+			} 
 			else if (i % 2 == 1)//奇數月 
 			{
 				if (i >= 8)//八月後 
