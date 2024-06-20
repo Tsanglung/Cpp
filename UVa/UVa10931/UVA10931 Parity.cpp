@@ -34,3 +34,24 @@ int main()
 	}
 	return 0;
 }
+
+/*
+int main() {
+    stack<int> st;
+    int n;
+    while (cin >> n && n) {
+        int parity = 0;
+        while (n) {
+            parity += n % 2;
+            st.push(n % 2);
+            n /= 2;
+        }
+        cout << "The parity of ";
+        while (!st.empty()) {                           //只要堆疊st還有值
+            cout << st.top();   //印出stack最上面元素
+            st.pop();             //從堆疊st刪除此最上面元素
+        }
+        cout << " is " << parity << " (mod 2).\n";
+    }
+}
+*/
