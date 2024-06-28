@@ -4,8 +4,9 @@
 #include<iostream>
 using namespace std;
 //遞迴版本
-int R_BinarySearch(int *a,const int x,const int left, const int right ){
-    if(left <= right){
+int R_BinarySearch(int *a,const int x,const int left, const int right )
+{   //Program 1.11
+    if(left <= right){ 
         int middle = ((left + right) / 2);
         if(x < a[middle]) return R_BinarySearch(a,x,left,middle - 1);
         else if(x > a[middle]) return R_BinarySearch(a,x,middle + 1,right);
@@ -14,7 +15,8 @@ int R_BinarySearch(int *a,const int x,const int left, const int right ){
     return -1; //not found
 }
 
-int BinarySearch(int *a,const int x,const int n){
+int BinarySearch(int *a,const int x,const int n)
+{   //Program 1.10
 // 從排序過的 array 搜尋 x
     int left = 0,right = n - 1;
     while(left <= right){
