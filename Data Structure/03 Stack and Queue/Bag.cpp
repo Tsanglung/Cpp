@@ -2,7 +2,7 @@
 using namespace std;
 template<class T>
 class Bag
-{
+{ 
 private:
     T *array;
     int top , capacity;
