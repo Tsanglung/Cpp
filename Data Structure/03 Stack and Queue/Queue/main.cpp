@@ -12,4 +12,4 @@ int main()
     A.Pop();
     cout<<A.Front()<<" "<<A.Rear()<<endl;
     A.Output();
-}
+} 

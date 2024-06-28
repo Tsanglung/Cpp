@@ -19,7 +19,7 @@ class Queue
         void Pop(); //delete front
         void Output();
 };
-
+ 
 
 #include"Queue.cpp"
 #endif

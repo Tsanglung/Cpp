@@ -15,7 +15,7 @@ inline T& Queue<T>::Front() const {if(!IsEmpty()) return queue[(front + 1) % cap
 
 template<class T>
 inline T& Queue<T>::Rear() const { if(!IsEmpty()) return queue[rear];}
-
+ 
 template<class T>
 void Queue<T>::Push(const T& e)
 {
