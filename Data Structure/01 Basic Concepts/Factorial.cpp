@@ -6,7 +6,7 @@ int RFactorial(int n)//»¼°j¶¥­¼
     if(n <= 1) return 1;
     else return n * RFactorial(n - 1);
 } 
-
+ 
 int Factorial(int n)
 {
     int F = 1;
