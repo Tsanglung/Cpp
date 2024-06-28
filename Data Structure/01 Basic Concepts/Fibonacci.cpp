@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 int RFibonacci (int n)// ¶O¤ó¼Æ¦C
-{ 
+{ //recursive
    if(n == 0) return 0; 
    else if(n == 1) return 1;
    else return RFibonacci(n - 1) + RFibonacci(n - 2);
 } 
 
 void Fibonacci(int n)
-{
+{ //iterative
   if( n <= 1) cout << n << endl;
   else {
     int fn,fn1 = 1,fn2 = 0;
