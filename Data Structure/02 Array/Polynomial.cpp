@@ -14,7 +14,7 @@ class Polynomial {//多項式運算
 public:
     Polynomial(int size = 0) : Size(size) {termArray = new Term[size];}
     ~Polynomial() {delete[] termArray;}
-
+ 
     friend istream& operator>>(istream& is, Polynomial& Poly); // overloading >>
     friend ostream& operator<<(ostream& os, const Polynomial& Poly); // overloading <<
 
