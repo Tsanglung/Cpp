@@ -9,7 +9,7 @@
 #include<iostream>
 using namespace std;
 void SelectionSort(int *a, const int n)
-{
+{   // Program 1.8
     for(int i = 0; i < n; i++){
         int j = i;
         for(int k = i + 1; k < n; k++){
