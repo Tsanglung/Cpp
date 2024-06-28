@@ -19,6 +19,6 @@ class Stack
         void Pop(); //delete top
         void Output();
 };
-
+ 
 #include"Stack.cpp"
 #endif

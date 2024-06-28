@@ -17,7 +17,7 @@ inline T& Stack<T>::Top()const //top ¤¸¯À
     if(IsEmpty()) throw "Stack is empty";
     else return stack[top];
 }
-
+ 
 template<class T>
 void Stack<T>::Push(const T& e) //insert to top
 {
