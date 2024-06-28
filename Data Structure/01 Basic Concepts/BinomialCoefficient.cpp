@@ -6,7 +6,7 @@ int Binomial(int n,int m)
     if (m == 0 || m == n) return 1; 
     else return Binomial(n - 1, m) + Binomial(n - 1, m - 1);
 }
-
+ 
 int main()
 {
     int m , n;
