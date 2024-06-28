@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//Program 2.1、2.2、2.3
 class Rectangle
 {	//矩形
 	friend ostream& operator<< (ostream& os, Rectangle& Rectabgle);
@@ -8,11 +8,11 @@ private:
 	int x, y, h, w;
 
 public:
-	Rectangle(int x = 0, int y = 0, int height = 0, int width = 0) : x(x), y(y), h(height), w(width) { }//建構子
+	Rectangle(int x = 0, int y = 0, int height = 0, int width = 0) : x(x), y(y), h(height), w(width) { }//建構子 program 2.4 -> 2.5
 	~Rectangle() {}	//解構子
 	int GetH() { return h; };//高
 	int GetW() { return w; };//寬
-	bool operator==(const Rectangle& s)//overloading operator ==
+	bool operator==(const Rectangle& s)//overloading operator == program 2.6
 	{	// 比較兩物件是否相等
 		if (this == &s) return true;
 		else if ((x == s.x) && (y == s.y) && (h == s.h) && (w == s.w))	return true;
@@ -21,7 +21,7 @@ public:
 };
 
 ostream& operator<<(ostream& os, Rectangle& Rectabgle)//overloading operator <<
-{
+{	//program 2.7
 	os << "Position(x , y) : (" << Rectabgle.x << " , " << Rectabgle.y << ") " << endl;
 	os << "Height : " << Rectabgle.h << endl;
 	os << "Width : " << Rectabgle.w << endl;
