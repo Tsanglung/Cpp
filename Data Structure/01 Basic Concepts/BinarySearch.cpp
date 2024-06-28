@@ -14,7 +14,7 @@ int R_BinarySearch(int *a,const int x,const int left, const int right )
     }
     return -1; //not found
 }
-
+ 
 int BinarySearch(int *a,const int x,const int n)
 {   //Program 1.10
 // 從排序過的 array 搜尋 x
