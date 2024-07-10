@@ -11,7 +11,7 @@ using namespace std;
 struct Term {
     int coef; // Coefficient (integer)
     int exp;  // Exponent
-};
+}; 
 
 // Function to generate a random polynomial with a given number of terms
 void generateRandomPolynomial(ofstream& outFile, int numTerms) {

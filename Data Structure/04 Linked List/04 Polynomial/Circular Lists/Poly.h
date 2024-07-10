@@ -24,7 +24,7 @@ istream& operator>>(istream&, Polynomial&); //輸出串流
 ostream& operator<<(ostream&, Polynomial&); //輸入串流
 
 class Polynomial {
-    public:
+    public: 
         Polynomial();   //建構子
         /*(a)*/friend istream& operator>>(istream&, Polynomial&);  //input
         /*(b)*/friend ostream& operator<<(ostream&, Polynomial&);//output

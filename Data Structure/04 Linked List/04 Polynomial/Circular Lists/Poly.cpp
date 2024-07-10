@@ -18,7 +18,7 @@ Polynomial& Polynomial::operator+(const Polynomial& b) const
             item = {t, aPos->data.exp};
             if (t) newPoly->poly.InsertBack(item);
             aPos = aPos->link;  bPos = bPos->link;
-        } 
+        }  
         else if (aPos->data.exp > bPos->data.exp) 
         {
             item = {aPos->data.coef, aPos->data.exp};

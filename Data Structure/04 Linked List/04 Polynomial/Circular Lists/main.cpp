@@ -14,7 +14,7 @@ void TestPerformance(const Polynomial& A, const Polynomial& B)
     Eval = A + B;
     cout << "A(x) + B(x) = " << Eval;
     cout << "x = ? ";
-    cin >> in;
+    cin >> in; 
     cout << "Eval("<<in<<") = A("<<in<<") + B("<<in<<")= " << Eval.Evaluate(in) << endl;
     auto stop1 = high_resolution_clock::now();
     auto duration1 = duration_cast<microseconds>(stop1 - start1);

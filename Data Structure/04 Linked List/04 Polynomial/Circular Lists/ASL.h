@@ -12,7 +12,7 @@ template<class Type>
 class Chain;
 
 #include "Poly.h" //Polynomial.h
-
+ 
 template<class Type> 
 class ChainNode {
     friend class Chain<Type>;
