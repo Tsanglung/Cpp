@@ -9,7 +9,7 @@ using namespace std::chrono;
 void TestPerformance(const Polynomial& A, const Polynomial& B)
 {
     Polynomial Eval;
-    float in;
+    float in; 
     auto start1 = high_resolution_clock::now();
     Eval = A + B;
     cout << "A(x) + B(x) = " << Eval;

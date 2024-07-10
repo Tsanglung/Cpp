@@ -9,7 +9,7 @@ Chain<Type>::Chain()
     head = last = GetNode();    // 取得 header node
     head->link = head;          // 建立 circular
 }
-
+ 
 template<class Type>
 Chain<Type>::~Chain()
 {  //刪除circluar list，並將node 新增到可用空間

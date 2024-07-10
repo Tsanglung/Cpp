@@ -4,7 +4,7 @@
 #include <ctime>   // For seeding rand() with time
 #include <vector>
 #include <algorithm> // For sorting
-
+ 
 using namespace std;
 
 // Structure to represent a term in a polynomial

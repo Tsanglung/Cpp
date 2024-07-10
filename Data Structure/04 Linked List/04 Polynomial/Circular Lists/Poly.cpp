@@ -1,6 +1,6 @@
 //Polynomial.cpp
 #include "Poly.h"
-
+ 
 Polynomial::Polynomial()    {   poly.head->data = {0, -1};     /* 初始化 polynomial*/}
 Polynomial::Polynomial(const Polynomial &p) {   if (&p != NULL)     *this = p;  /*copy 建構子*/}
 Polynomial::~Polynomial()   {} //解構子

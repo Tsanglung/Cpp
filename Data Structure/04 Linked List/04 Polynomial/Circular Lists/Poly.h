@@ -18,7 +18,7 @@ typedef struct term {
     //定義Term的結構
     float coef; //coefficiten
     int exp;    //exponent
-} Term;
+} Term; 
 
 istream& operator>>(istream&, Polynomial&); //輸出串流
 ostream& operator<<(ostream&, Polynomial&); //輸入串流

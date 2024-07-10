@@ -13,7 +13,7 @@ class Chain;
 
 #include "Poly.h" //Polynomial.h
 
-template<class Type>
+template<class Type> 
 class ChainNode {
     friend class Chain<Type>;
     friend class Polynomial;
