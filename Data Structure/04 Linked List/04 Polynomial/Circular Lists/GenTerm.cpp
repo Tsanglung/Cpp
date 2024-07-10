@@ -16,7 +16,7 @@ struct Term {
 // Function to generate a random polynomial with a given number of terms
 void generateRandomPolynomial(ofstream& outFile, int numTerms) {
     vector<Term> polynomial;
-
+ 
     // Generate unique exponents
     vector<int> exponents;
     for (int i = 0; i < numTerms; ++i) {
