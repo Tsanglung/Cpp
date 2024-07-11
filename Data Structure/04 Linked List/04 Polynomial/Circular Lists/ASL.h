@@ -9,7 +9,7 @@
 ½Ò¥» p.186 Program 4.6
 */
 template<class Type>
-class Chain;
+class Chain; 
 
 #include "Poly.h" //Polynomial.h
  

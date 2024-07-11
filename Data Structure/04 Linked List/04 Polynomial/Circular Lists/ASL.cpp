@@ -10,7 +10,7 @@ Chain<Type>::Chain()
     head->link = head;          // 建立 circular
 }
   
-template<class Type>
+template<class Type> 
 Chain<Type>::~Chain()
 {  //刪除circluar list，並將node 新增到可用空間
     //課本 P198 Program 4.17

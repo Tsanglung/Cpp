@@ -5,8 +5,8 @@
 #include <iostream>
 using namespace std;
 
-/*
-根據HomeWork
+/* 
+HomeWork
 課本p203 Program 4.23
 定義 Polynomial class
 */
