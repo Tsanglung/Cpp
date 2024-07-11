@@ -13,7 +13,7 @@ Polynomial Polynomial::operator+(const Polynomial& b) const
     while (ai != poly.end() && bi != b.poly.end()) 
     {
         if (ai->exp == bi->exp) 
-        {
+        { 
             int sum = ai->coef + bi->coef;
             if (sum) c.poly.InsertBack(temp.Set(sum, ai->exp));
             ++ai; ++bi;

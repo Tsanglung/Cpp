@@ -5,7 +5,7 @@
 
 template<class T>
 class Chain;
-
+ 
 template<class T>
 class ChainIterator;
 

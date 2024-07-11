@@ -10,7 +10,7 @@ int main() {
     if (!inputFile.is_open()) {
         cerr << "can't open file..." << endl;
         return 1;
-    }
+    } 
     inputFile >> A;
     cout << "A(x) = " << A << endl;
     inputFile >> B;

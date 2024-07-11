@@ -5,7 +5,7 @@ ChainNode<T>::ChainNode(T e, ChainNode<T> *l) : data(e), link(l) {}
 
 template<class T>
 Chain<T>::Chain() : first(nullptr), last(nullptr) {}
-
+ 
 template<class T>
 void Chain<T>::InsertBack(const T& e) 
 {

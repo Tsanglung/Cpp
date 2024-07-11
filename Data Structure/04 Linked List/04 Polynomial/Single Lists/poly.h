@@ -16,7 +16,7 @@ struct Term {
 
 istream& operator>>(istream&, Polynomial&); //輸入串流
 ostream& operator<<(ostream&, const Polynomial&); //輸出串流
-
+ 
 class Polynomial {
 private:
     Chain<Term> poly;
