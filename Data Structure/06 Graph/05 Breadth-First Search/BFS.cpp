@@ -103,6 +103,7 @@ public:
                 {
                     q.Push(w);
                     visited[w] = true;
+                    //cout << w << " ";
                 }
                 current = current->link;
             }
